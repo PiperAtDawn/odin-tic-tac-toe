@@ -1,0 +1,16 @@
+:root {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: lightgray;
+}
+
+.container {
+  background-color: white;
+  max-width: 1200px;
+  width: 100%;
+}

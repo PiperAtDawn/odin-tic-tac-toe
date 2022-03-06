@@ -1,0 +1,21 @@
+:root {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: lightgray;
+}
+
+.container {
+  background-color: white;
+  max-width: 1200px;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
