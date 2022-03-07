@@ -1,5 +1,6 @@
 :root {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 body {
@@ -7,10 +8,102 @@ body {
   display: flex;
   justify-content: center;
   background-color: lightgray;
+  height: 100%;
+}
+
+.modal {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.hide {
+  display: none;
+}
+
+.modal-content {
+  background-color: white;
+  width: 500px;
+  height: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px lightblue;
+  border-radius: 5px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.modal-content input[type='text'],
+.modal-content input[type='number'] {
+  padding: 5px;
+}
+
+#submit {
+  display: block;
+  align-self: center;
+  cursor: pointer;
+  padding: 10px 20px;
 }
 
 .container {
   background-color: white;
   max-width: 1200px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+#reset {
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-color: lightblue;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.gameboard {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 2px;
+  background-color: lightblue;
+  border: solid 2px lightblue;
+}
+
+.cell {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 3rem;
+  user-select: none;
+
+  &:hover {
+    background-color: lightgray;
+  }
+}
+
+.unclickable {
+  pointer-events: none;
 }
